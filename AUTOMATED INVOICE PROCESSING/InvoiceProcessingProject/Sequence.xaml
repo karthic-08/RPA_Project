@@ -1,0 +1,365 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/intelligentocr/classification" xmlns:p2="http://schemas.uipath.com/workflow/activities/document-processing-contracts/classification" xmlns:p3="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:p4="http://schemas.uipath.com/workflow/activities/intelligentocr/extraction" xmlns:p5="http://schemas.uipath.com/workflow/activities/documentunderstanding-ml" xmlns:p6="http://schemas.uipath.com/workflow/activities/document-processing-contracts/extraction" xmlns:p7="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:p8="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uoa="clr-namespace:UiPath.OmniPage.Activities;assembly=UiPath.OmniPage.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Taxonomy</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.TaxonomyManagement</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Dom</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Results</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Actions</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Digitization</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.Vision.OmniPage.Core</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Classification</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.DataExtraction</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.DocumentClassification</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.DataExtraction</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Actions</x:String>
+      <x:String>UiPath.OmniPage.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Training</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Training</x:String>
+      <x:String>UiPath.DocumentUnderstanding.ML.Activities</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentProcessing.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OmniPage.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Persistence.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.OmniPage.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="891.2,3264.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="p8:DocumentTaxonomy" Name="taxonomy" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <p:LoadTaxonomy DisplayName="Load Taxonomy" sap:VirtualizedContainerService.HintSize="578.4,137.6" sap2010:WorkflowViewState.IdRef="LoadTaxonomy_1" Taxonomy="[taxonomy]" />
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentText" sap:VirtualizedContainerService.HintSize="578.4,2995.2" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[Directory.GetFiles(&quot;C:\Users\krish\OneDrive\Documents\UiPath\InvoiceProcessingProject\Invoices&quot;)]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:String">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="544.8,2848.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence sap:VirtualizedContainerService.HintSize="511.2,2788.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="DocText" />
+                <Variable x:TypeArguments="p3:Document" Name="DocObject" />
+                <Variable x:TypeArguments="p7:ClassificationResult[]" Name="ClassifiedResults" />
+                <Variable x:TypeArguments="p7:ExtractionResult" Name="ExtractedResults" />
+                <Variable x:TypeArguments="p:DocumentValidationActionData" Name="ActionObjects" />
+                <Variable x:TypeArguments="p7:ExtractionResult" Name="ValidatedData" />
+                <Variable x:TypeArguments="sd2:DataSet" Name="dataSet" />
+                <Variable x:TypeArguments="x:String" Default="[currentText]" Name="DocPath" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <p:DigitizeDocument ApplyOcrMigrated="True" ApplyOcrOnPdf="Auto" DegreeOfParallelism="-1" DetectCheckboxes="True" DisplayName="Digitize Document" DocumentObjectModel="[DocObject]" DocumentPath="[DocPath]" DocumentText="[DocText]" ForceApplyOCR="False" sap:VirtualizedContainerService.HintSize="477.6,332" sap2010:WorkflowViewState.IdRef="DigitizeDocument_2">
+                <p:DigitizeDocument.OCREngine>
+                  <ActivityFunc x:TypeArguments="sd:Image, x:String, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                    <ActivityFunc.Argument1>
+                      <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                    </ActivityFunc.Argument1>
+                    <ActivityFunc.Argument2>
+                      <DelegateInArgument x:TypeArguments="x:String" Name="PredictionId" />
+                    </ActivityFunc.Argument2>
+                    <uoa:OmniPageOCR Language="{x:Null}" Output="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" Text="{x:Null}" BundleType="Basic" ComputeSkewAngle="False" DisplayName="OmniPage OCR" ExtractHandprintedText="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="312,24.8" sap2010:WorkflowViewState.IdRef="OmniPageOCR_2" Image="[Image]" NoopExecution="False" PredictionId="[PredictionId]" />
+                  </ActivityFunc>
+                </p:DigitizeDocument.OCREngine>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </p:DigitizeDocument>
+              <p1:ClassifyDocumentScope ClassificationResults="[ClassifiedResults]" DisplayName="Classify Document Scope" DocumentObjectModel="[DocObject]" DocumentPath="[DocPath]" DocumentText="[DocText]" sap:VirtualizedContainerService.HintSize="477.6,473.6" sap2010:WorkflowViewState.IdRef="ClassifyDocumentScope_2" Taxonomy="[taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UI0d7748f06f674170952fa4baf66c42ac&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;InvoiceProject.InvoiceDetails.Invoice&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;InvoiceProject.InvoiceDetails.Invoice&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true}}}},&quot;ClassifierMinimumConfidence&quot;:{&quot;UI0d7748f06f674170952fa4baf66c42ac&quot;:&quot;0&quot;},&quot;DocumentTypesByPersistenceId&quot;:{&quot;UI0d7748f06f674170952fa4baf66c42ac&quot;:[]}}">
+                <p1:ClassifyDocumentScope.Classifiers>
+                  <p1:KeywordBasedClassifier HumanValidatedData="{x:Null}" LearningData="{x:Null}" DisplayName="Keyword Based Classifier" sap:VirtualizedContainerService.HintSize="281.6,115.2" sap2010:WorkflowViewState.IdRef="KeywordBasedClassifier_2" LearningFilePath="DocumentProcessing\Classifier.json" PersistenceId="UI0d7748f06f674170952fa4baf66c42ac">
+                    <p1:KeywordBasedClassifier.ClassifierResult>
+                      <OutArgument x:TypeArguments="p2:ClassifierResult">
+                        <DelegateArgumentReference x:TypeArguments="p2:ClassifierResult">
+                          <DelegateOutArgument x:TypeArguments="p2:ClassifierResult" Name="ClassifierResult" />
+                        </DelegateArgumentReference>
+                      </OutArgument>
+                    </p1:KeywordBasedClassifier.ClassifierResult>
+                    <p1:KeywordBasedClassifier.DocumentObjectModel>
+                      <InArgument x:TypeArguments="p3:Document">
+                        <DelegateArgumentValue x:TypeArguments="p3:Document">
+                          <DelegateInArgument x:TypeArguments="p3:Document" Name="DocumentObjectModel" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p1:KeywordBasedClassifier.DocumentObjectModel>
+                    <p1:KeywordBasedClassifier.DocumentPath>
+                      <InArgument x:TypeArguments="x:String">
+                        <DelegateArgumentValue x:TypeArguments="x:String">
+                          <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p1:KeywordBasedClassifier.DocumentPath>
+                    <p1:KeywordBasedClassifier.DocumentText>
+                      <InArgument x:TypeArguments="x:String">
+                        <DelegateArgumentValue x:TypeArguments="x:String">
+                          <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p1:KeywordBasedClassifier.DocumentText>
+                    <p1:KeywordBasedClassifier.DocumentTypes>
+                      <InArgument x:TypeArguments="p2:ClassifierDocumentType[]">
+                        <DelegateArgumentValue x:TypeArguments="p2:ClassifierDocumentType[]">
+                          <DelegateInArgument x:TypeArguments="p2:ClassifierDocumentType[]" Name="DocumentTypes" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p1:KeywordBasedClassifier.DocumentTypes>
+                    <p1:KeywordBasedClassifier.PredictionId>
+                      <InArgument x:TypeArguments="x:String">
+                        <DelegateArgumentValue x:TypeArguments="x:String">
+                          <DelegateInArgument x:TypeArguments="x:String" Name="PredictionId" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p1:KeywordBasedClassifier.PredictionId>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </p1:KeywordBasedClassifier>
+                </p1:ClassifyDocumentScope.Classifiers>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </p1:ClassifyDocumentScope>
+              <p4:DataExtractionScope DocumentTypeId="{x:Null}" RuntimeAssetPath="{x:Null}" RuntimeTenantUrl="{x:Null}" ApplyGenerativeValidation="False" ClassificationResult="[ClassifiedResults(0)]" DisplayName="Data Extraction Scope" DocumentObjectModel="[DocObject]" DocumentPath="[DocPath]" DocumentText="[DocText]" ExtractionResult="[ExtractedResults]" FormatValuesIfPossible="True" GenerativeValidationConfidenceThreshold="99" sap:VirtualizedContainerService.HintSize="477.6,553.6" sap2010:WorkflowViewState.IdRef="DataExtractionScope_2" Taxonomy="[taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UIefe3baf5a4bf4c2a993c1bcf3c151c8a&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;InvoiceProject.InvoiceDetails.Invoice&quot;:{&quot;FieldMappings&quot;:{&quot;InvoiceProject.InvoiceDetails.Invoice.InvoiceNumber&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;InvoiceProject.InvoiceDetails.Invoice.InvoiceNumber&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;invoice-no\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;InvoiceProject.InvoiceDetails.Invoice.OrderID&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;InvoiceProject.InvoiceDetails.Invoice.OrderID&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;po-no\&quot;&quot;,&quot;ShouldExtract&quot;:false},&quot;InvoiceProject.InvoiceDetails.Invoice.CustomerName&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;InvoiceProject.InvoiceDetails.Invoice.CustomerName&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;billing-name\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;InvoiceProject.InvoiceDetails.Invoice.InvoiceDate&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;InvoiceProject.InvoiceDetails.Invoice.InvoiceDate&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;date\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;InvoiceProject.InvoiceDetails.Invoice.Total&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;InvoiceProject.InvoiceDetails.Invoice.Total&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;total\&quot;&quot;,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;}}}},&quot;ExtractorMinimumConfidence&quot;:{&quot;UIefe3baf5a4bf4c2a993c1bcf3c151c8a&quot;:&quot;0&quot;},&quot;ExtractorsAliases&quot;:{},&quot;DocumentTypeOptionsByExtractor&quot;:{&quot;UIefe3baf5a4bf4c2a993c1bcf3c151c8a&quot;:[{&quot;FieldId&quot;:&quot;&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;name&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;vendor-addr&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;billing-name&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;billing-addr&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;shipping-addr&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;invoice-no&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;po-no&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;vendor-vat-no&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;date&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;tax&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;total&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;payment-terms&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;net-amount&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;due-date&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;discount&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;shipping-charges&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;payment-addr&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;billing-vat-no&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;shipping-date&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;vendor-email&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;bank-name&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;bank-account-no&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;iban&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;swift-code&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;bank-addr&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;bank-routing-no&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;tax-rate&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;shipping-method&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;currency&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;items&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;description&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;quantity&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;unit-price&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;line-amount&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;item-po-no&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;line-no&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null},{&quot;FieldId&quot;:&quot;part-no&quot;,&quot;SubOptions&quot;:null,&quot;Metadata&quot;:null}],&quot;Metadata&quot;:null}],&quot;Metadata&quot;:[{&quot;Key&quot;:&quot;schema&quot;,&quot;Value&quot;:&quot;{\&quot;api_version\&quot;:\&quot;1.2\&quot;,\&quot;model\&quot;:\&quot;invoices\&quot;,\&quot;release\&quot;:\&quot;ga\&quot;,\&quot;schema\&quot;:{\&quot;classification\&quot;:{\&quot;currency\&quot;:[{\&quot;description\&quot;:\&quot;United States\&quot;,\&quot;name\&quot;:\&quot;USD\&quot;},{\&quot;description\&quot;:\&quot;Europe\&quot;,\&quot;name\&quot;:\&quot;EUR\&quot;},{\&quot;description\&quot;:\&quot;Romania\&quot;,\&quot;name\&quot;:\&quot;RON\&quot;},{\&quot;description\&quot;:\&quot;UK\&quot;,\&quot;name\&quot;:\&quot;GBP\&quot;},{\&quot;description\&quot;:\&quot;India\&quot;,\&quot;name\&quot;:\&quot;INR\&quot;},{\&quot;description\&quot;:\&quot;Canada\&quot;,\&quot;name\&quot;:\&quot;CAD\&quot;},{\&quot;description\&quot;:\&quot;Australia\&quot;,\&quot;name\&quot;:\&quot;AUD\&quot;},{\&quot;description\&quot;:\&quot;Malaysia\&quot;,\&quot;name\&quot;:\&quot;MYR\&quot;},{\&quot;description\&quot;:\&quot;Brazil\&quot;,\&quot;name\&quot;:\&quot;BRL\&quot;},{\&quot;description\&quot;:\&quot;Japan\&quot;,\&quot;name\&quot;:\&quot;JPY\&quot;},{\&quot;description\&quot;:\&quot;Singapore\&quot;,\&quot;name\&quot;:\&quot;SGD\&quot;},{\&quot;description\&quot;:\&quot;Honduras\&quot;,\&quot;name\&quot;:\&quot;HNL\&quot;},{\&quot;description\&quot;:\&quot;Nicaragua\&quot;,\&quot;name\&quot;:\&quot;NIO\&quot;},{\&quot;description\&quot;:\&quot;United Arab Emirates\&quot;,\&quot;name\&quot;:\&quot;AED\&quot;},{\&quot;description\&quot;:\&quot;Hong Kong\&quot;,\&quot;name\&quot;:\&quot;HKD\&quot;},{\&quot;description\&quot;:\&quot;Switzerland\&quot;,\&quot;name\&quot;:\&quot;CHF\&quot;},{\&quot;description\&quot;:\&quot;Algeria\&quot;,\&quot;name\&quot;:\&quot;DZD\&quot;},{\&quot;description\&quot;:\&quot;Sweden\&quot;,\&quot;name\&quot;:\&quot;SEK\&quot;},{\&quot;description\&quot;:\&quot;Norway\&quot;,\&quot;name\&quot;:\&quot;NOK\&quot;},{\&quot;description\&quot;:\&quot;Poland\&quot;,\&quot;name\&quot;:\&quot;PLN\&quot;},{\&quot;description\&quot;:\&quot;Denmark\&quot;,\&quot;name\&quot;:\&quot;DKK\&quot;},{\&quot;description\&quot;:\&quot;New Zeeland\&quot;,\&quot;name\&quot;:\&quot;NZD\&quot;},{\&quot;description\&quot;:\&quot;Serbia\&quot;,\&quot;name\&quot;:\&quot;RSD\&quot;},{\&quot;description\&quot;:\&quot;Saudi Arabia\&quot;,\&quot;name\&quot;:\&quot;SAR\&quot;},{\&quot;description\&quot;:\&quot;South Africa\&quot;,\&quot;name\&quot;:\&quot;ZAR\&quot;}]},\&quot;extraction\&quot;:[{\&quot;color\&quot;:\&quot;#ff0088\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Vendor Name\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;n\&quot;,\&quot;multi_line\&quot;:true,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;name\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;levenshtein\&quot;,\&quot;split_items\&quot;:false,\&quot;synonyms\&quot;:[\&quot;Supplier Name\&quot;,\&quot;Provider Name\&quot;],\&quot;type\&quot;:\&quot;string\&quot;},{\&quot;color\&quot;:\&quot;#65d642\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Vendor Address\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;v\&quot;,\&quot;multi_line\&quot;:true,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;vendor-addr\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;levenshtein\&quot;,\&quot;split_items\&quot;:false,\&quot;synonyms\&quot;:[\&quot;Vendor Location\&quot;,\&quot;Supplier Address\&quot;],\&quot;type\&quot;:\&quot;string\&quot;},{\&quot;color\&quot;:\&quot;#7f5140\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Billing Name\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;b\&quot;,\&quot;multi_line\&quot;:true,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;billing-name\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;levenshtein\&quot;,\&quot;split_items\&quot;:false,\&quot;synonyms\&quot;:[\&quot;Bill Recipient Name\&quot;,\&quot;Payer Name\&quot;,\&quot;Customer Name\&quot;],\&quot;type\&quot;:\&quot;string\&quot;},{\&quot;color\&quot;:\&quot;#ff8c40\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Billing Address\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;i\&quot;,\&quot;multi_line\&quot;:true,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;billing-addr\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;levenshtein\&quot;,\&quot;split_items\&quot;:false,\&quot;synonyms\&quot;:[\&quot;Bill Recipient Address\&quot;,\&quot;Payer Address\&quot;,\&quot;Customer Address\&quot;],\&quot;type\&quot;:\&quot;string\&quot;},{\&quot;color\&quot;:\&quot;#00bfb3\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Shipping Address\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;s\&quot;,\&quot;multi_line\&quot;:true,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;shipping-addr\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;levenshtein\&quot;,\&quot;split_items\&quot;:false,\&quot;synonyms\&quot;:[\&quot;Delivery Address\&quot;,\&quot;Shipment Address\&quot;],\&quot;type\&quot;:\&quot;string\&quot;},{\&quot;color\&quot;:\&quot;#f2ff40\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Invoice Number\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;o\&quot;,\&quot;multi_line\&quot;:false,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;invoice-no\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;exact_match\&quot;,\&quot;split_items\&quot;:false,\&quot;synonyms\&quot;:[\&quot;Bill Number\&quot;],\&quot;type\&quot;:\&quot;id-no\&quot;},{\&quot;color\&quot;:\&quot;#0099bf\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Purchase Order Number\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;p\&quot;,\&quot;multi_line\&quot;:true,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;po-no\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;exact_match\&quot;,\&quot;split_items\&quot;:false,\&quot;synonyms\&quot;:[\&quot;Customer Purchase Order Number\&quot;],\&quot;type\&quot;:\&quot;id-no\&quot;},{\&quot;color\&quot;:\&quot;#40ff8c\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Vendor VAT Number\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;e\&quot;,\&quot;multi_line\&quot;:false,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;vendor-vat-no\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;exact_match\&quot;,\&quot;split_items\&quot;:false,\&quot;synonyms\&quot;:[\&quot;Vendor Tax ID\&quot;,\&quot;Supplier VAT Number\&quot;,\&quot;Provider Tax ID\&quot;],\&quot;type\&quot;:\&quot;id-no\&quot;},{\&quot;color\&quot;:\&quot;#110040\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Document Date\&quot;,\&quot;dmy_parsing\&quot;:\&quot;auto\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;d\&quot;,\&quot;multi_line\&quot;:false,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;date\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;exact_match\&quot;,\&quot;split_items\&quot;:false,\&quot;synonyms\&quot;:[\&quot;Invoice Date\&quot;],\&quot;type\&quot;:\&quot;date\&quot;},{\&quot;color\&quot;:\&quot;#eabfff\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Tax Amount\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;t\&quot;,\&quot;multi_line\&quot;:false,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;tax\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;exact_match\&quot;,\&quot;split_items\&quot;:false,\&quot;synonyms\&quot;:[\&quot;GST Amount\&quot;,\&quot;Taxation Amount\&quot;,\&quot;Tax Value\&quot;,\&quot;Taxation Fee\&quot;,\&quot;Value Added Tax Amount\&quot;],\&quot;type\&quot;:\&quot;number\&quot;},{\&quot;color\&quot;:\&quot;#ee00ff\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Total Amount\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;a\&quot;,\&quot;multi_line\&quot;:false,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;total\&quot;,\&quot;post_processing\&quot;:\&quot;largest_value\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;exact_match\&quot;,\&quot;split_items\&quot;:false,\&quot;synonyms\&quot;:[\&quot;Invoice Total\&quot;],\&quot;type\&quot;:\&quot;number\&quot;},{\&quot;color\&quot;:\&quot;#005581\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Payment Terms\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;y\&quot;,\&quot;multi_line\&quot;:true,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;payment-terms\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;levenshtein\&quot;,\&quot;split_items\&quot;:false,\&quot;synonyms\&quot;:[\&quot;Payment Conditions\&quot;,\&quot;Payment Policy\&quot;],\&quot;type\&quot;:\&quot;string\&quot;},{\&quot;color\&quot;:\&quot;#7f2039\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Net Amount\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;-\&quot;,\&quot;multi_line\&quot;:false,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;net-amount\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;exact_match\&quot;,\&quot;split_items\&quot;:false,\&quot;synonyms\&quot;:[\&quot;Total Net\&quot;,\&quot;Total Amount Excl. GST\&quot;,\&quot;Subtotal\&quot;],\&quot;type\&quot;:\&quot;number\&quot;},{\&quot;color\&quot;:\&quot;#9e78db\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Due Date\&quot;,\&quot;dmy_parsing\&quot;:\&quot;auto\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;u\&quot;,\&quot;multi_line\&quot;:false,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;due-date\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;exact_match\&quot;,\&quot;split_items\&quot;:false,\&quot;synonyms\&quot;:[\&quot;Payment Due Date\&quot;,\&quot;Payment Due\&quot;],\&quot;type\&quot;:\&quot;date\&quot;},{\&quot;color\&quot;:\&quot;#383040\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Discount Amount\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;c\&quot;,\&quot;multi_line\&quot;:false,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;discount\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;exact_match\&quot;,\&quot;split_items\&quot;:false,\&quot;synonyms\&quot;:[\&quot;Discount\&quot;,\&quot;Minus Discount\&quot;],\&quot;type\&quot;:\&quot;number\&quot;},{\&quot;color\&quot;:\&quot;#20403e\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Shipping Charges\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;h\&quot;,\&quot;multi_line\&quot;:false,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;shipping-charges\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;exact_match\&quot;,\&quot;split_items\&quot;:false,\&quot;synonyms\&quot;:[\&quot;Freight Charges\&quot;,\&quot;S&amp;H Charges\&quot;],\&quot;type\&quot;:\&quot;number\&quot;},{\&quot;color\&quot;:\&quot;#bfeaff\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Payment Address\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;m\&quot;,\&quot;multi_line\&quot;:true,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;payment-addr\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;levenshtein\&quot;,\&quot;split_items\&quot;:false,\&quot;synonyms\&quot;:[\&quot;Remittance Address\&quot;,\&quot;Remit to Address\&quot;,\&quot;Payment Mailing Address\&quot;],\&quot;type\&quot;:\&quot;string\&quot;},{\&quot;color\&quot;:\&quot;#bf60b9\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Items - Descriptions\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;1\&quot;,\&quot;multi_line\&quot;:true,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;description\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;levenshtein\&quot;,\&quot;section\&quot;:\&quot;items\&quot;,\&quot;split_items\&quot;:false,\&quot;synonyms\&quot;:[\&quot;Items - Products Details\&quot;,\&quot;Description\&quot;],\&quot;table_id\&quot;:\&quot;\&quot;,\&quot;type\&quot;:\&quot;string\&quot;},{\&quot;color\&quot;:\&quot;#401036\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Items - Quantities\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;2\&quot;,\&quot;multi_line\&quot;:false,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;quantity\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;exact_match\&quot;,\&quot;section\&quot;:\&quot;items\&quot;,\&quot;split_items\&quot;:true,\&quot;synonyms\&quot;:[\&quot;Items - Number of Units\&quot;,\&quot;Quantity\&quot;],\&quot;table_id\&quot;:\&quot;\&quot;,\&quot;type\&quot;:\&quot;number\&quot;},{\&quot;color\&quot;:\&quot;#ffc480\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Items - Unit Prices\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;3\&quot;,\&quot;multi_line\&quot;:false,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;unit-price\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;exact_match\&quot;,\&quot;section\&quot;:\&quot;items\&quot;,\&quot;split_items\&quot;:true,\&quot;synonyms\&quot;:[\&quot;Items - Prices per Unit\&quot;,\&quot;Items - Costs per Items\&quot;,\&quot;Unit Price\&quot;],\&quot;table_id\&quot;:\&quot;\&quot;,\&quot;type\&quot;:\&quot;number\&quot;},{\&quot;color\&quot;:\&quot;#7f7920\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Items - Line Amounts\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;4\&quot;,\&quot;multi_line\&quot;:false,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;line-amount\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;exact_match\&quot;,\&quot;section\&quot;:\&quot;items\&quot;,\&quot;split_items\&quot;:true,\&quot;synonyms\&quot;:[\&quot;Items - Line Totals\&quot;,\&quot;Line Amount\&quot;],\&quot;table_id\&quot;:\&quot;\&quot;,\&quot;type\&quot;:\&quot;number\&quot;},{\&quot;color\&quot;:\&quot;#66bf00\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Items - Customer Purchase Order Numbers\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;5\&quot;,\&quot;multi_line\&quot;:false,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;item-po-no\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;exact_match\&quot;,\&quot;section\&quot;:\&quot;items\&quot;,\&quot;split_items\&quot;:false,\&quot;synonyms\&quot;:[\&quot;Items - Purchase Order Numbers\&quot;,\&quot;Items -  Order Numbers\&quot;,\&quot;Customer Purchase Order Number - Item Level\&quot;],\&quot;table_id\&quot;:\&quot;\&quot;,\&quot;type\&quot;:\&quot;id-no\&quot;},{\&quot;color\&quot;:\&quot;#ff0000\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Items - Line Numbers\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;6\&quot;,\&quot;multi_line\&quot;:false,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;line-no\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;exact_match\&quot;,\&quot;section\&quot;:\&quot;items\&quot;,\&quot;split_items\&quot;:false,\&quot;synonyms\&quot;:[\&quot;Line Number\&quot;],\&quot;table_id\&quot;:\&quot;\&quot;,\&quot;type\&quot;:\&quot;id-no\&quot;},{\&quot;color\&quot;:\&quot;#0066ff\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Items - Part Number\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;7\&quot;,\&quot;multi_line\&quot;:false,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;part-no\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;exact_match\&quot;,\&quot;section\&quot;:\&quot;items\&quot;,\&quot;split_items\&quot;:false,\&quot;synonyms\&quot;:[\&quot;Items - Part Identifiers\&quot;,\&quot;Items - Product Numbers\&quot;,\&quot;Items - Item Codes\&quot;,\&quot;Part Number\&quot;],\&quot;table_id\&quot;:\&quot;\&quot;,\&quot;type\&quot;:\&quot;id-no\&quot;},{\&quot;color\&quot;:\&quot;#b1f23e\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Billing VAT Number\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;g\&quot;,\&quot;multi_line\&quot;:false,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;billing-vat-no\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;exact_match\&quot;,\&quot;split_items\&quot;:false,\&quot;synonyms\&quot;:[\&quot;Billing GSTIN\&quot;,\&quot;Billing Tax ID\&quot;],\&quot;type\&quot;:\&quot;id-no\&quot;},{\&quot;color\&quot;:\&quot;#2d8020\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Shipping Date\&quot;,\&quot;dmy_parsing\&quot;:\&quot;auto\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;r\&quot;,\&quot;multi_line\&quot;:false,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;shipping-date\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;exact_match\&quot;,\&quot;split_items\&quot;:false,\&quot;synonyms\&quot;:[\&quot;Delivery Date\&quot;,\&quot;Shipment Date\&quot;],\&quot;type\&quot;:\&quot;date\&quot;},{\&quot;color\&quot;:\&quot;#ff0022\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Vendor Email Address\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;w\&quot;,\&quot;multi_line\&quot;:false,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;vendor-email\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;levenshtein\&quot;,\&quot;split_items\&quot;:false,\&quot;synonyms\&quot;:[\&quot;Supplier Email Address\&quot;,\&quot;Provider Email\&quot;],\&quot;type\&quot;:\&quot;string\&quot;},{\&quot;color\&quot;:\&quot;#403030\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Bank Name\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;z\&quot;,\&quot;multi_line\&quot;:false,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;bank-name\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;levenshtein\&quot;,\&quot;split_items\&quot;:false,\&quot;synonyms\&quot;:[\&quot;Financial Institution Name\&quot;,\&quot;Banking Institution\&quot;],\&quot;type\&quot;:\&quot;string\&quot;},{\&quot;color\&quot;:\&quot;#4400ff\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Bank Account Number\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;x\&quot;,\&quot;multi_line\&quot;:false,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;bank-account-no\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;exact_match\&quot;,\&quot;split_items\&quot;:false,\&quot;synonyms\&quot;:[\&quot;Bank Account Identifier\&quot;,\&quot;Account Number\&quot;,\&quot;Account ID\&quot;],\&quot;type\&quot;:\&quot;id-no\&quot;},{\&quot;color\&quot;:\&quot;#c79c7a\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Bank IBAN\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;]\&quot;,\&quot;multi_line\&quot;:false,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;iban\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;exact_match\&quot;,\&quot;split_items\&quot;:false,\&quot;synonyms\&quot;:[\&quot;International Bank Account Number\&quot;,\&quot;Banking Account Number\&quot;,\&quot;IBAN Code\&quot;,\&quot;IBAN\&quot;],\&quot;type\&quot;:\&quot;id-no\&quot;},{\&quot;color\&quot;:\&quot;#50c8e9\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;SWIFT Code\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;f\&quot;,\&quot;multi_line\&quot;:false,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;swift-code\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;exact_match\&quot;,\&quot;split_items\&quot;:false,\&quot;synonyms\&quot;:[\&quot;Bank Identifier Code\&quot;,\&quot;SWIFT/BIC Code\&quot;,\&quot;Bank Code\&quot;],\&quot;type\&quot;:\&quot;id-no\&quot;},{\&quot;color\&quot;:\&quot;#b6d544\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Bank Address\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;j\&quot;,\&quot;multi_line\&quot;:true,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;bank-addr\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;levenshtein\&quot;,\&quot;split_items\&quot;:false,\&quot;synonyms\&quot;:[\&quot;Bank Location\&quot;,\&quot;Bank Branch Address\&quot;,\&quot;Bank Office Address\&quot;],\&quot;type\&quot;:\&quot;string\&quot;},{\&quot;color\&quot;:\&quot;#c8003b\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Bank Routing Number\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;l\&quot;,\&quot;multi_line\&quot;:false,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;bank-routing-no\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;exact_match\&quot;,\&quot;split_items\&quot;:false,\&quot;synonyms\&quot;:[\&quot;Bank Routing Identifier\&quot;,\&quot;Routing Number\&quot;,\&quot;Routing ID\&quot;],\&quot;type\&quot;:\&quot;id-no\&quot;},{\&quot;color\&quot;:\&quot;#b43252\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Tax Rate\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;k\&quot;,\&quot;multi_line\&quot;:false,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;tax-rate\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;exact_match\&quot;,\&quot;split_items\&quot;:false,\&quot;synonyms\&quot;:[\&quot;Tax Percentage\&quot;],\&quot;type\&quot;:\&quot;number\&quot;},{\&quot;color\&quot;:\&quot;#b51cff\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;display_name\&quot;:\&quot;Shipping Method\&quot;,\&quot;hidden\&quot;:false,\&quot;hotkey\&quot;:\&quot;,\&quot;,\&quot;multi_line\&quot;:true,\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;shipping-method\&quot;,\&quot;post_processing\&quot;:\&quot;first_span\&quot;,\&quot;qna\&quot;:false,\&quot;scoring\&quot;:\&quot;levenshtein\&quot;,\&quot;split_items\&quot;:false,\&quot;synonyms\&quot;:[\&quot;Delivery Service\&quot;,\&quot;Shipment Method\&quot;,\&quot;Shipping Option\&quot;],\&quot;type\&quot;:\&quot;string\&quot;}]},\&quot;tags\&quot;:[{\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;name\&quot;,\&quot;type\&quot;:\&quot;string\&quot;},{\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;vendor-addr\&quot;,\&quot;type\&quot;:\&quot;string\&quot;},{\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;billing-name\&quot;,\&quot;type\&quot;:\&quot;string\&quot;},{\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;billing-addr\&quot;,\&quot;type\&quot;:\&quot;string\&quot;},{\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;shipping-addr\&quot;,\&quot;type\&quot;:\&quot;string\&quot;},{\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;invoice-no\&quot;,\&quot;type\&quot;:\&quot;id-no\&quot;},{\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;po-no\&quot;,\&quot;type\&quot;:\&quot;id-no\&quot;},{\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;vendor-vat-no\&quot;,\&quot;type\&quot;:\&quot;id-no\&quot;},{\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;date\&quot;,\&quot;type\&quot;:\&quot;date\&quot;},{\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;tax\&quot;,\&quot;type\&quot;:\&quot;number\&quot;},{\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;total\&quot;,\&quot;type\&quot;:\&quot;number\&quot;},{\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;payment-terms\&quot;,\&quot;type\&quot;:\&quot;string\&quot;},{\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;net-amount\&quot;,\&quot;type\&quot;:\&quot;number\&quot;},{\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;due-date\&quot;,\&quot;type\&quot;:\&quot;date\&quot;},{\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;discount\&quot;,\&quot;type\&quot;:\&quot;number\&quot;},{\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;shipping-charges\&quot;,\&quot;type\&quot;:\&quot;number\&quot;},{\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;payment-addr\&quot;,\&quot;type\&quot;:\&quot;string\&quot;},{\&quot;name\&quot;:\&quot;description\&quot;,\&quot;section\&quot;:\&quot;items\&quot;,\&quot;table_id\&quot;:\&quot;\&quot;,\&quot;type\&quot;:\&quot;string\&quot;},{\&quot;name\&quot;:\&quot;quantity\&quot;,\&quot;section\&quot;:\&quot;items\&quot;,\&quot;table_id\&quot;:\&quot;\&quot;,\&quot;type\&quot;:\&quot;number\&quot;},{\&quot;name\&quot;:\&quot;unit-price\&quot;,\&quot;section\&quot;:\&quot;items\&quot;,\&quot;table_id\&quot;:\&quot;\&quot;,\&quot;type\&quot;:\&quot;number\&quot;},{\&quot;name\&quot;:\&quot;line-amount\&quot;,\&quot;section\&quot;:\&quot;items\&quot;,\&quot;table_id\&quot;:\&quot;\&quot;,\&quot;type\&quot;:\&quot;number\&quot;},{\&quot;name\&quot;:\&quot;item-po-no\&quot;,\&quot;section\&quot;:\&quot;items\&quot;,\&quot;table_id\&quot;:\&quot;\&quot;,\&quot;type\&quot;:\&quot;id-no\&quot;},{\&quot;name\&quot;:\&quot;line-no\&quot;,\&quot;section\&quot;:\&quot;items\&quot;,\&quot;table_id\&quot;:\&quot;\&quot;,\&quot;type\&quot;:\&quot;id-no\&quot;},{\&quot;name\&quot;:\&quot;part-no\&quot;,\&quot;section\&quot;:\&quot;items\&quot;,\&quot;table_id\&quot;:\&quot;\&quot;,\&quot;type\&quot;:\&quot;id-no\&quot;},{\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;billing-vat-no\&quot;,\&quot;type\&quot;:\&quot;id-no\&quot;},{\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;shipping-date\&quot;,\&quot;type\&quot;:\&quot;date\&quot;},{\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;vendor-email\&quot;,\&quot;type\&quot;:\&quot;string\&quot;},{\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;bank-name\&quot;,\&quot;type\&quot;:\&quot;string\&quot;},{\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;bank-account-no\&quot;,\&quot;type\&quot;:\&quot;id-no\&quot;},{\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;iban\&quot;,\&quot;type\&quot;:\&quot;id-no\&quot;},{\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;swift-code\&quot;,\&quot;type\&quot;:\&quot;id-no\&quot;},{\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;bank-addr\&quot;,\&quot;type\&quot;:\&quot;string\&quot;},{\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;bank-routing-no\&quot;,\&quot;type\&quot;:\&quot;id-no\&quot;},{\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;tax-rate\&quot;,\&quot;type\&quot;:\&quot;number\&quot;},{\&quot;multi_valued\&quot;:false,\&quot;name\&quot;:\&quot;shipping-method\&quot;,\&quot;type\&quot;:\&quot;string\&quot;},{\&quot;is_classification_field\&quot;:true,\&quot;name\&quot;:\&quot;currency\&quot;,\&quot;type\&quot;:\&quot;string\&quot;}]}\n&quot;}]}]}}">
+                <p4:DataExtractionScope.AvailableAssetPaths>
+                  <x:Array Type="x:String">
+                    <x:String>ARPA/ACMECredentials</x:String>
+                  </x:Array>
+                </p4:DataExtractionScope.AvailableAssetPaths>
+                <p4:DataExtractionScope.Extractors>
+                  <p5:MachineLearningExtractor SelectedMLSkill="{x:Null}" ApiKey="CS+JYDZLkGRxfVhBMtXsfIoh3qHmdB8prVIyEQr8+13NRZmMORVzbUx8HpTXpAtvAR3mBy8B6P+63pQSUC9yWA==" Configuration="{}{&quot;Endpoint&quot;:&quot;https://du.uipath.com/ie/invoices&quot;,&quot;ApiKey&quot;:&quot;CS+JYDZLkGRxfVhBMtXsfIoh3qHmdB8prVIyEQr8+13NRZmMORVzbUx8HpTXpAtvAR3mBy8B6P+63pQSUC9yWA==&quot;,&quot;AvailableMLSkills&quot;:[&quot;Classifier1&quot;,&quot;InvoiceMLSkill&quot;]}" DisplayName="Machine Learning Extractor" Endpoint="https://du.uipath.com/ie/invoices" sap:VirtualizedContainerService.HintSize="289.6,195.2" sap2010:WorkflowViewState.IdRef="MachineLearningExtractor_2" PersistenceId="UIefe3baf5a4bf4c2a993c1bcf3c151c8a" RetryOnFailure="True" Timeout="100000" UseServerSideOCR="False">
+                    <p5:MachineLearningExtractor.AvailableMLSkills>
+                      <scg:List x:TypeArguments="x:String" Capacity="2">
+                        <x:String>Classifier1</x:String>
+                        <x:String>InvoiceMLSkill</x:String>
+                      </scg:List>
+                    </p5:MachineLearningExtractor.AvailableMLSkills>
+                    <p5:MachineLearningExtractor.DocumentBounds>
+                      <InArgument x:TypeArguments="p7:ResultsDocumentBounds">
+                        <DelegateArgumentValue x:TypeArguments="p7:ResultsDocumentBounds">
+                          <DelegateInArgument x:TypeArguments="p7:ResultsDocumentBounds" Name="DocumentBounds" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p5:MachineLearningExtractor.DocumentBounds>
+                    <p5:MachineLearningExtractor.DocumentObjectModel>
+                      <InArgument x:TypeArguments="p3:Document">
+                        <DelegateArgumentValue x:TypeArguments="p3:Document">
+                          <DelegateInArgument x:TypeArguments="p3:Document" Name="DocumentObjectModel" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p5:MachineLearningExtractor.DocumentObjectModel>
+                    <p5:MachineLearningExtractor.DocumentPath>
+                      <InArgument x:TypeArguments="x:String">
+                        <DelegateArgumentValue x:TypeArguments="x:String">
+                          <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p5:MachineLearningExtractor.DocumentPath>
+                    <p5:MachineLearningExtractor.DocumentText>
+                      <InArgument x:TypeArguments="x:String">
+                        <DelegateArgumentValue x:TypeArguments="x:String">
+                          <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p5:MachineLearningExtractor.DocumentText>
+                    <p5:MachineLearningExtractor.ExtractorDocumentType>
+                      <InArgument x:TypeArguments="p6:ExtractorDocumentType">
+                        <DelegateArgumentValue x:TypeArguments="p6:ExtractorDocumentType">
+                          <DelegateInArgument x:TypeArguments="p6:ExtractorDocumentType" Name="ExtractorDocumentType" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p5:MachineLearningExtractor.ExtractorDocumentType>
+                    <p5:MachineLearningExtractor.ExtractorResult>
+                      <OutArgument x:TypeArguments="p6:ExtractorResult">
+                        <DelegateArgumentReference x:TypeArguments="p6:ExtractorResult">
+                          <DelegateOutArgument x:TypeArguments="p6:ExtractorResult" Name="ExtractorResult" />
+                        </DelegateArgumentReference>
+                      </OutArgument>
+                    </p5:MachineLearningExtractor.ExtractorResult>
+                    <p5:MachineLearningExtractor.PredictionId>
+                      <InArgument x:TypeArguments="x:String">
+                        <DelegateArgumentValue x:TypeArguments="x:String">
+                          <DelegateInArgument x:TypeArguments="x:String" Name="PredictionId" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p5:MachineLearningExtractor.PredictionId>
+                  </p5:MachineLearningExtractor>
+                </p4:DataExtractionScope.Extractors>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </p4:DataExtractionScope>
+              <p:CreateDocumentValidationAction FieldsValidationConfidence="{x:Null}" TimeoutMs="{x:Null}" ActionCatalog="[&quot;Invoice Validation&quot;]" ActionOutput="[ActionObjects]" ActionPriority="Medium" ActionTitle="Please Review Invoice" AutomaticExtractionResults="[ExtractedResults]" BucketFolderPath="Invoices" BucketName="Invoices" DisplayName="Create Document Validation Action" DocumentObjectModel="[DocObject]" DocumentPath="[DocPath]" DocumentText="[DocText]" FolderPath="Krish" sap:VirtualizedContainerService.HintSize="477.6,404" sap2010:WorkflowViewState.IdRef="CreateDocumentValidationAction_2" RetryOnFailure="True" ShowOnlyRelevantPageRange="False" Taxonomy="[taxonomy]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </p:CreateDocumentValidationAction>
+              <p:WaitForDocumentValidationActionAndResume StatusMessage="{x:Null}" TimeoutMs="{x:Null}" WaitItemDataObject="{x:Null}" ActionInput="[ActionObjects]" ActionOutput="[ActionObjects]" AutomaticExtractionResults="[ExtractedResults]" DisplayName="Wait For Document Validation Action And Resume" DocumentObjectModel="[DocObject]" DocumentPath="[DocPath]" DocumentText="[DocText]" DownloadFolderPath="DocumentProcessing\Downloads" sap:VirtualizedContainerService.HintSize="477.6,396.8" sap2010:WorkflowViewState.IdRef="WaitForDocumentValidationActionAndResume_2" RemoveDataFromStorage="False" RetryOnFailure="True" Taxonomy="[taxonomy]" ValidatedExtractionResults="[ValidatedData]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </p:WaitForDocumentValidationActionAndResume>
+              <p4:ExportExtractionResults DataSet="[dataSet]" DisplayName="Export Extraction Results" ExtractionResult="[ValidatedData]" sap:VirtualizedContainerService.HintSize="477.6,208.8" sap2010:WorkflowViewState.IdRef="ExportExtractionResults_2" IncludeConfidence="False" IncludeOCRConfidence="False" />
+              <ui:ForEach x:TypeArguments="sd2:DataTable" CurrentIndex="{x:Null}" DisplayName="For Each currentDataTable" sap:VirtualizedContainerService.HintSize="477.6,336.8" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[dataSet.Tables]">
+                <ui:ForEach.Body>
+                  <ActivityAction x:TypeArguments="sd2:DataTable">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="sd2:DataTable" Name="currentDataTable" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,199.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:AppendRange WorkbookPathResource="{x:Null}" DataTable="[currentDataTable]" DisplayName="Append Range Workbook" sap:VirtualizedContainerService.HintSize="382.4,139.2" sap2010:WorkflowViewState.IdRef="AppendRange_1" SheetName="[currentDataTable.TableName]" WorkbookPath="InvoiceExtraction.xlsx" />
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEach.Body>
+              </ui:ForEach>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="578.4,108.8" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;All the invoices are approved by the Admin successfully.&quot;]" />
+  </Sequence>
+</Activity>

@@ -1,0 +1,391 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="VehicleCount" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="VehicleCount_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:isactr="http://schemas.uipath.com/workflow/integration-service-activities/isactr" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uiascb="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.C24C387E719_generateEmail_Create.Bundle;assembly=C24C387E719_generate.KuLYZ4WWAxN1MC2fq2QXlt3" xmlns:um="clr-namespace:UiPath.MLServices;assembly=UiPath.MLServices" xmlns:uma="clr-namespace:UiPath.MLServices.Activities;assembly=UiPath.MLServices.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.MLServices</x:String>
+      <x:String>UiPath.MLServices.Enums</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.MLServices.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models.FilterBuilder</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Helpers.TypeDetailsCustomization</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Activities.Contracts</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.MLServices</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MLServices.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>C24C387E719_generate.KuLYZ4WWAxN1MC2fq2QXlt3</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Activities.Contracts</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="VehicleCount" sap:VirtualizedContainerService.HintSize="718.4000000000001,2266.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap:VirtualizedContainerService.HintSize="534.4,2243.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:ForEachFileX DisplayName="For Each File in Folder" Folder="C:\Users\Kishore Karthik\Documents\Object detection pictures" sap:VirtualizedContainerService.HintSize="500.8,2160" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+        <ui:ForEachFileX.Body>
+          <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
+            <ActivityAction.Argument1>
+              <DelegateInArgument x:TypeArguments="si:FileInfo" Name="CurrentFile" />
+            </ActivityAction.Argument1>
+            <ActivityAction.Argument2>
+              <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+            </ActivityAction.Argument2>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="467.2,1873.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="JsonResponse" />
+                <Variable x:TypeArguments="x:String" Name="Base64String" />
+                <Variable x:TypeArguments="sd:Image" Name="Image" />
+                <Variable x:TypeArguments="njl:JObject" Name="jsonObject" />
+                <Variable x:TypeArguments="x:String" Name="PredictedClass" />
+                <Variable x:TypeArguments="s:String[]" Name="StringArray" />
+                <Variable x:TypeArguments="x:Int32" Name="Vehicle" />
+                <Variable x:TypeArguments="x:Int32" Name="Counter" />
+                <Variable x:TypeArguments="x:String" Name="emailResponse" />
+                <Variable x:TypeArguments="x:String" Name="pwd" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uma:MLSkills ApiKey="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Name="{x:Null}" NumberOfRetries="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SkillURL="{x:Null}" StatusCode="{x:Null}" TimeOutMs="{x:Null}" Connection="Robot" DisplayName="MLSkill" ExternApiFileType="JSON" sap:VirtualizedContainerService.HintSize="433.6,84.8" sap2010:WorkflowViewState.IdRef="MLSkills_2" Item="[CurrentFile.ToString]" JsonResponse="[JsonResponse]" NextPageNum="2" RefreshList="False" TotalCount="1">
+                <uma:MLSkills.MLSkillList>
+                  <scg:List x:TypeArguments="um:MLSkill" Capacity="4">
+                    <x:Reference>__ReferenceID0</x:Reference>
+                  </scg:List>
+                </uma:MLSkills.MLSkillList>
+                <uma:MLSkills.SelectedMLSkill>
+                  <um:MLSkill x:Name="__ReferenceID0" AccessUri="https://ai-uipath-we-b.deskover.com/mlskills/5613997e-2c82-4576-8dde-3eb6c62a4fe9/c8c560a2-ca48-4d11-ae05-782a426f9bde/cluster-b/objectdetectionmlskill" AccountId="5613997e-2c82-4576-8dde-3eb6c62a4fe9" Description="" Id="39881ed9-fa1a-46bf-b28c-8cf58c67b06c" InputDescription="Path to the image to be analyzed." InputType="FILE" Name="ObjectDetectionMLSkill" OutputDescription="JSON with identified object's class byte array representation (allows you to see box around objects), identified object's class - name, score (between 0-1) and bounding_boxes coordinates. Example: {&quot;Predicted ByteArray&quot;: &quot;/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAIBAQEBAQIBAQECAgICAgQDAgI…TD&quot;, &quot;Predicted Class&quot;: [{&quot;class&quot;: &quot;book&quot;, &quot;score&quot;: &quot; 0.65&quot;, &quot;bounding_box&quot;: [38.348690032958984, 274.14703369140625, 116.80537414550781, 306.26788330078125]}, {&quot;class&quot;: &quot;book&quot;, &quot;score&quot;: &quot; 0.62&quot;, &quot;bounding_box&quot;: [34.108882904052734, 236.6508331298828, 118.49102783203125, 272.1687316894531]}]}" ProjectId="d8494d7f-d290-4809-89e4-7a9e664d8982" TenantId="c8c560a2-ca48-4d11-ae05-782a426f9bde" />
+                </uma:MLSkills.SelectedMLSkill>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uma:MLSkills>
+              <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="433.6,122.4" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_2" JsonObject="[jsonObject]" JsonString="[JsonResponse]" />
+              <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[PredictedClass]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[jsonObject("Predicted Class").ToString]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[Base64String]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[jsonObject("Predicted ByteArray").ToString]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="sd:Image">[Image]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="sd:Image">[System.Drawing.Image.FromStream(New MemoryStream(Convert.FromBase64String(Base64String)))]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:SaveImage DisplayName="Save Image" FileName="[&quot;C:\Users\Kishore Karthik\Documents\Object detection pictures\Output\&quot; + Path.GetFileName(CurrentFile.ToString)]" sap:VirtualizedContainerService.HintSize="433.6,166.4" sap2010:WorkflowViewState.IdRef="SaveImage_1" Image="[Image]" />
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[PredictedClass]" />
+              <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_5">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="s:String[]">[StringArray]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="s:String[]">[(PredictedClass.Replace("[","").Replace("]","")).Split("}".ToCharArray)]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_6">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Int32">[Vehicle]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_7">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Int32">[Counter]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[(StringArray.Count-1)&gt;Counter]" DisplayName="While" sap:VirtualizedContainerService.HintSize="433.6,84.8" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                <ui:InterruptibleWhile.Body>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="534.4,664.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If Condition="[StringArray(Counter).ToString.ToLower().Contains(&quot;car&quot;)]" sap:VirtualizedContainerService.HintSize="500.8,604.8" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If.Then>
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="467.2,278.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_8">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Int32">[Vehicle]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Int32">[Vehicle+1]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_9">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Int32">[Counter]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Int32">[Counter + 1]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="467.2,164.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_10">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Int32">[Counter]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Int32">[Counter+1]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </ui:InterruptibleWhile.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:InterruptibleWhile>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[CurrentFile.FullName + &quot; contains &quot; + Vehicle.ToString() + &quot; number of vehicles&quot;]" />
+              <isactr:ConnectorActivity Configuration="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" ConnectionId="4ec0e777-a9bd-446f-b07b-c824c387e719" DisplayName="Generate Email" sap:VirtualizedContainerService.HintSize="433.6,84.8" sap2010:WorkflowViewState.IdRef="ConnectorActivity_1" UiPathActivityTypeId="c46e5f7f-894c-3074-9f7b-9c162b70e3c9">
+                <isactr:ConnectorActivity.FieldObjects>
+                  <isactr:FieldObject Name="need_salutation" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="salutation_string" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:String">Greetings</InArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="salutation_name" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:String">Traffic department</InArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="need_sign_off" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="sign_off_string" Type="FieldArgument" />
+                  <isactr:FieldObject Name="sign_off_name" Type="FieldArgument" />
+                  <isactr:FieldObject Name="email_content" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:String">["since we have found " + Vehicle.ToString() + " vehicles congested at traffic signal, provide a suitable solution to overcome the traffic issue"]</InArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="detectInputLanguage" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="outputLanguage" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:String">English</InArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="total_words" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:Int64" />
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="style" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:String">Concise</InArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="output_format" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:String">Plain text</InArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="example" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:String" />
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="out_emailContent" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <OutArgument x:TypeArguments="x:String">[emailResponse]</OutArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="Jit_generateEmail" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <OutArgument x:TypeArguments="uiascb:generateEmail_Create" />
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                </isactr:ConnectorActivity.FieldObjects>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </isactr:ConnectorActivity>
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="433.6,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[emailResponse]" />
+              <ui:GetPassword DisplayName="Get Password" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="GetPassword_1" ProtectedPassword="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9N6rrAPKMkiqOmcuPML+hQAAAAACAAAAAAAQZgAAAAEAACAAAAA2KKWSZ28ckUKQpU0PVeDIoqow19UGnXVtHnSiWKIxgQAAAAAOgAAAAAIAACAAAADVI+vIdfWDlzNsQVJDvHhR0pcStEINO8o7vuDWNWR/5RAAAABEMos5WRDKZ2LpyH4dOgv+QAAAAMrWeSLvSsAArPDU2pC02HCWQI67i3U/DllB8BrxsRGrz9kaIc7wM+UWVULmouqMEg6QolvZvTSf25H81NhjhV0=" Result="[pwd]" />
+              <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="[emailResponse]" DisplayName="Send SMTP Mail Message" Email="210701123@rajalakshmi.edu.in" EnableSSL="True" sap:VirtualizedContainerService.HintSize="433.6,169.6" sap2010:WorkflowViewState.IdRef="SendMail_2" IgnoreCRL="False" IsBodyHtml="False" Password="[pwd]" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="reqesting traffic clearance" To="kishorekarthikmuralidharan@gmail.com">
+                <ui:SendMail.Files>
+                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                </ui:SendMail.Files>
+              </ui:SendMail>
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEachFileX.Body>
+      </ui:ForEachFileX>
+    </Sequence>
+  </Sequence>
+</Activity>
